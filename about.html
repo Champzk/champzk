@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Style */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('bbg.jpg'); /* Add the correct image path */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 1rem 2rem;
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+           
+        }
+
+        .nav__logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .nav__links {
+            list-style-type: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav__links .link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .nav__links .link:hover {
+            text-decoration: underline;
+        }
+
+        /* About Section */
+        .about-section {
+            text-align: center;
+            padding: 60px 20px; /* Adjusted padding to leave space from the top */
+            color: white;
+        }
+
+        .about-section h2 {
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        .about-section p {
+            color: #eee;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        /* About Images Section */
+        .about-images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .about-image {
+            width: 30%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-images {
+                flex-direction: column;
+            }
+
+            .about-image {
+                width: 80%;
+                margin: 10px auto;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav__logo"><a href="#">Travel.co</a></div>
+        <ul class="nav__links">
+            <li><a href="Website.html" class="link">Home</a></li>
+            <li><a href="services.html" class="link">Services</a></li>
+            <li><a href="contact.html" class="link">Contact</a></li>
+            <li><a href="offers.html" class="link">Offers</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Us Section -->
+    <div class="about-section">
+        <h2>About Us</h2>
+        <p>At Champ Zk's Company, we are passionate about helping you discover the world. Our dedicated team offers personalized travel experiences that cater to your every need.</p>
+        
+        <!-- About Images Section -->
+        <div class="about-images">
+            <div class="about-image">
+                <img src="exp.jpg" alt="Travel Experience"> <!-- Replace with your image -->
+            </div>
+            <div class="about-image">
+                <img src="ff.jpg" alt="Adventure Travel"> <!-- Replace with your image -->
+            </div>
+            <div class="about-image">
+                <img src="cult.jpg" alt="Cultural Experiences"> <!-- Replace with your image -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

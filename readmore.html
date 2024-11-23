@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel with Background Image</title>
+  <style>
+    /* Styles for the entire page */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4; /* Light background color for the body */
+    }
+
+    /* Styling for the travel section */
+    .travel-section {
+      height: 400px;  /* Set the height of the section */
+      background: url("sdd.jpg") no-repeat center center; /* Background image */
+      background-size: cover;  /* Make sure the background image covers the whole section */
+      color: white;  /* Text color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Semi-transparent overlay for text visibility */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);  /* Black overlay with 40% opacity */
+    }
+
+    /* Content area */
+    .content {
+      position: relative;  /* Position the content above the overlay */
+      z-index: 1;
+      padding: 20px;
+      max-width: 600px;
+    }
+
+    /* Heading style */
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    /* Paragraph style */
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    /* Button style for Read More link */
+    .read-more {
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: white;
+      background-color: #ff6347;  /* Tomato color */
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect for the button */
+    .read-more:hover {
+      background-color: #e53e3e;  /* Darken the button color on hover */
+    }
+
+    /* Style for the hidden content */
+    .read-more-content {
+      display: none;  /* Initially hidden */
+      background-color: #ffffff;
+      color: #333;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Optional: Add a nice transition for the content */
+    .read-more-content.show {
+      display: block;  /* Show content when class 'show' is added */
+    }
+
+    /* Back button style */
+    .back-button {
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: white;
+      background-color: #4682b4; /* SteelBlue color */
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect for the back button */
+    .back-button:hover {
+      background-color: #3b6e8b; /* Darker SteelBlue */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Travel Section -->
+  <section class="travel-section">
+    <div class="overlay"></div> <!-- Dark overlay for contrast -->
+    <div class="content">
+      <h2>Discover Your Next Adventure</h2>
+      <p>
+        Key Elements of a Strong Introduction:
+        Engagement: The introduction should immediately grab the attention of the reader. In a travel context, this might include exciting language, visuals, or experiences that evoke wanderlust.
+      </p>
+      <a href="javascript:void(0);" class="read-more" onclick="toggleReadMore()">Read More</a>
+    </div>
+  </section>
+
+  <!-- Back Button -->
+  <a href="javascript:void(0);" class="back-button" onclick="goBack()">Back to Homepage</a>
+
+  <!-- Hidden Read More Content Section -->
+  <div class="read-more-content" id="readMoreContent">
+    <h3>Explore the World with Us</h3>
+    <p>
+      Our curated trips are designed to offer you unforgettable experiences. Whether you're trekking through the mountains, exploring ancient ruins, or immersing yourself in local cultures, we guarantee you'll find something to suit your taste.
+    </p>
+    <p>
+      With expert guides, seamless travel planning, and a passion for discovery, we're here to help you explore the world in style and comfort. Our team is dedicated to making every trip a once-in-a-lifetime experience, ensuring that you create memories that last forever.
+    </p>
+    <p>
+      From luxury escapes to budget adventures, we have something for every traveler. Whether you're seeking relaxation or adrenaline-packed activities, your perfect journey starts here.
+    </p>
+  </div>
+
+  <script>
+    // Function to toggle the visibility of the "Read More" content
+    function toggleReadMore() {
+      const content = document.getElementById("readMoreContent");
+      content.classList.toggle("show");  // Toggle the visibility
+    }
+
+    // Function to go to the homepage (redirect to index.html)
+    function goBack() {
+      window.location.href = 'Website.html';  // Redirect to homepage
+    }
+  </script>
+
+</body>
+</html>
